@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gaze Demo PT</title>
+    <script type="text/javascript" src="js/dot_gaze.js">
+    </script>
+    <style>
+    body {background : black;}
+	.dot {
+	    height: 675px;
+	    width: 675px;
+	    background-color: white;
+	    border-radius: 50%;
+	    display: inline-block;
+	    font-family: Arial, Helvetica, sans-serif;
+	    font-weight: bold;
+	    font-size: 400%;
+	    text-align: center;
+	    display: table-cell;
+	    vertical-align: middle;
+	    -webkit-filter: blur(0.5px);
+  		filter: blur(0.5px);
+	}
+
+	.small_dot {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: crimson;
+        border-radius: 50%;
+    }
+
+	#gaze {
+		transition: all 0.35s ease-in-out;
+		-webkit-transition: all 0.3s ease-in-out;
+
+	}
+
+	/* Safari 4.0 - 8.0 */
+	@-webkit-keyframes redden {
+    from {background-color: lightblue;}
+    to {background-color: crimson;}
+	}
+
+	/* Standard syntax */
+	@keyframes redden {
+    from {background-color: lightblue;}
+    to {background-color: crimson;}
+	}
+	</style>
+  </head>
+  <body>
+    <div id="output"></div>
+    <div id="gaze" style="text-align:center">
+  		<span id="words" class="dot"></span>
+	</div>
+  </body>
+</html>
